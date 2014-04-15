@@ -11,7 +11,8 @@ var parser = new PaVEParser();
 
 parser
   .on('data', function(data) {
-    output.write(data.payload);
+    // output.write(data.payload);
+    console.log(data.frame_number.toString() + " " + data.total_chunks.toString());
   })
   .on('end', function() {
     output.end();
